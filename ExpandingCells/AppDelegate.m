@@ -18,6 +18,8 @@
 {
     [_window release];
     [_tabBarController release];
+    [_navController1 release];
+    [_navController2 release];
     [super dealloc];
 }
 

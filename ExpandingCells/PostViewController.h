@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "event.h"
 
 @interface PostViewController : UIViewController <UITextFieldDelegate>
-@property (strong, nonatomic) IBOutlet UITextView *question;
-@property (strong, nonatomic) IBOutlet UITextField *choice1;
-@property (strong, nonatomic) IBOutlet UITextField *choice2;
+@property (strong, nonatomic) IBOutlet UITextView *eventName;
+
+@property (retain, nonatomic) IBOutlet UITextView *place;
+
+@property (strong, nonatomic) event *newEvent;
+
 
 @end

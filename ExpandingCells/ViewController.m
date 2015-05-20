@@ -10,7 +10,7 @@
 #import "PostViewController.h"
 #import "DataModelDel.h"
 #import <pop/POP.h>
-
+#import "event.h"
 
 @implementation ViewController
 
@@ -32,13 +32,17 @@ static Cell* blankCell = nil;
 //                 NSLog(@"%@", str);
 //                }
 
-    [self setDataSource:[NSArray arrayWithArray:current_data_model.question_array]];
-    Cell*		cell		= [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
-    NSString*	cellName	= [[self dataSource] objectAtIndex:[indexPath row]];
+    [self setDataSource:[NSArray arrayWithArray:current_data_model.event_array]];
     
-//    for (NSString *str in self.dataSource) {
+    Cell*		cell		= [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
+    
+    event *currentEvent = [[self dataSource] objectAtIndex:[indexPath row]];
+    
+//    for (NSString *str in self.dataSource)
 //                         NSLog(@"%@", str);
 //                        }
+    
+   
     
     if (cell == nil)
     {
@@ -46,45 +50,38 @@ static Cell* blankCell = nil;
     }
     
     [cell setIndex:[indexPath row]];
-    [[cell cellName] setText:cellName];
     
+    NSString*	cellName = currentEvent.eventName;
+    
+    [[cell cellName] setText:cellName];
+
     int current_row = [indexPath row];
-    [cell.button0 setTitle:current_data_model.option_left_names[current_row] forState:UIControlStateNormal];
-    [cell.button1 setTitle:current_data_model.option_right_names[current_row] forState:UIControlStateNormal];
+    
+    NSString* cellDetail = [NSString stringWithFormat:
+                            @"Time: %@\nPlace: %@\nHost by: %@\nJoined People:%@\n",
+                            currentEvent.eventTime, currentEvent.eventPlace, currentEvent.owner, currentEvent.joinPeople ];
+    
+    [[cell eventDetail] setText:cellDetail];
     
     [cell setB0Function:^(){
         
-        NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:2];
+        NSNumber *sum =[NSNumber numberWithFloat:([currentEvent.joinPeople floatValue] + 1)];
         
-        //NSNumber *one = ;
-        NSNumber *sum = [NSNumber numberWithFloat:([current_data_model.option_right_votes[current_row] floatValue] + 1)];
-        current_data_model.option_right_votes[current_row] = sum;
+        currentEvent.joinPeople = sum;
         
-        [dataArray addObject:current_data_model.option_left_votes[current_row]];
-        //NSLog(@"test: %@", self.dataModel.option_left_votes[current_row]);
-        //NSNumber *two = [NSNumber numberWithInt:3];
-        [dataArray addObject:current_data_model.option_right_votes[current_row]];
-        [self.pieChartView renderInLayer:self.pieChartView dataArray:dataArray];
+        current_data_model.event_array[current_row] = currentEvent;
         
-    }];
-    
-    
-    
-    [cell setB1Function:^(){
-        NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:2];
+        NSString* cellDetail = [NSString stringWithFormat:
+                                @"Time: %@\nPlace: %@\nHost by: %@\nJoined People:%@\n",
+                                currentEvent.eventTime, currentEvent.eventPlace, currentEvent.owner, currentEvent.joinPeople ];
         
-        NSNumber *sum = [NSNumber numberWithFloat:([current_data_model.option_left_votes[current_row] floatValue] + 1)];
-        current_data_model.option_left_votes[current_row] = sum;
-        
-        //NSNumber *one = ;
-        //NSLog(@"test: %@", self.dataModel.option_left_votes[current_row]);
-        //NSNumber *two = [NSNumber numberWithInt:3];
-        [dataArray addObject:current_data_model.option_left_votes[current_row]];
-        [dataArray addObject:current_data_model.option_right_votes[current_row]];
+        [[cell eventDetail] setText:cellDetail];
 
-        [self.pieChartView renderInLayer:self.pieChartView dataArray:dataArray];
         
     }];
+    
+    
+    
 
 	return cell;
 }
@@ -97,7 +94,7 @@ static Cell* blankCell = nil;
 //    NSLog(@"%d", [[self dataSource] count]);
     DataModel *current_data_model = [DataModelDel myModel];
     
-	return [current_data_model.question_array count];
+	return [current_data_model.event_array count];
 }
 
 
@@ -150,7 +147,7 @@ static Cell* blankCell = nil;
 	[self setSelectedCell:cell];
 	
 	[cell expand];
-	
+    	
 	if (oldPath && (oldPath.row != indexPath.row))
 	{
 		[tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects: indexPath, oldPath, nil] withRowAnimation:UITableViewRowAnimationNone];
@@ -219,9 +216,7 @@ static Cell* blankCell = nil;
      | UIViewAutoresizingFlexibleWidth );
     
     [self.view insertSubview:backgroud atIndex:0];
-    if (self.test == true) {
-        NSLog(@"true");
-    }
+    
     
 }
 
@@ -244,7 +239,7 @@ static Cell* blankCell = nil;
         
         
             //set the title for the tab
-            self.title = @"Questions";
+            self.title = @"New Event";
             //set the image icon for the tab
             self.tabBarItem.image = [UIImage imageNamed:@"1.png"];
         
@@ -265,7 +260,6 @@ static Cell* blankCell = nil;
 - (void)viewDidLoad
 {	
     [super viewDidLoad];
-    self.test = false;
 
     [DataModelDel load];
     

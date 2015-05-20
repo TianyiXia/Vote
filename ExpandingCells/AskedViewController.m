@@ -9,6 +9,8 @@
 #import "AskedViewController.h"
 #import "ProfileViewController.h"
 #import "DataModelDel.h"
+#import "event.h"
+
 @interface AskedViewController ()
 
 @end
@@ -74,11 +76,12 @@ static Cell* blankCell = nil;
     //                 NSLog(@"%@", str);
     //                }
     
-    [self setDataSource:[NSArray arrayWithArray:current_data_model.question_array]];
-    Cell*		cell		= [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
-    NSString*	cellName	= [[self dataSource] objectAtIndex:[indexPath row]];
     
-    //    for (NSString *str in self.dataSource) {
+    [self setDataSource:[NSArray arrayWithArray:current_data_model.event_array]];
+    
+    Cell*		cell		= [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
+    
+    event *currentEvent = [[self dataSource] objectAtIndex:[indexPath row]];    //    for (NSString *str in self.dataSource) {
     //                         NSLog(@"%@", str);
     //                        }
     
@@ -88,29 +91,16 @@ static Cell* blankCell = nil;
     }
     
     [cell setIndex:[indexPath row]];
+    
+    NSString*	cellName = currentEvent.eventName;
+    
     [[cell cellName] setText:cellName];
     
-    int current_row = [indexPath row];
-    [cell.button0 setTitle:current_data_model.option_left_names[current_row] forState:UIControlStateNormal];
-    [cell.button1 setTitle:current_data_model.option_right_names[current_row] forState:UIControlStateNormal];
+    NSString* cellDetail = [NSString stringWithFormat:
+                            @"Time: %@\nPlace: %@\nHost by: %@\nJoined People:%@\n",
+                            currentEvent.eventTime, currentEvent.eventPlace, currentEvent.owner, currentEvent.joinPeople ];
     
-    
-        NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:2];
-        
-        //NSNumber *one = ;
-       // NSNumber *sum = [NSNumber numberWithFloat:([current_data_model.option_right_votes[current_row] floatValue] + 1)];
-        //current_data_model.option_right_votes[current_row] = sum;
-        
-        [dataArray addObject:current_data_model.option_left_votes[current_row]];
-        //NSLog(@"test: %@", self.dataModel.option_left_votes[current_row]);
-        //NSNumber *two = [NSNumber numberWithInt:3];
-        [dataArray addObject:current_data_model.option_right_votes[current_row]];
-        [self.pieChartView renderInLayer:self.pieChartView dataArray:dataArray];
-        
-    
-    
-    
- 
+    [[cell eventDetail] setText:cellDetail];
     
     return cell;
 
@@ -123,7 +113,7 @@ static Cell* blankCell = nil;
 {
     DataModel *current_data_model = [DataModelDel myModel];
 
-    return [current_data_model.question_array count];
+    return [current_data_model.event_array count];
 }
 
 

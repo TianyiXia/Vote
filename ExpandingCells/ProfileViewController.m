@@ -16,9 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _Name.text = @"Adam";
+    _Name.text = @"LeiShao";
     _Description.text = @"ID";
-    _Images.image = [UIImage imageNamed: @"profilePicture.jpg"];
+    _Images.image = [UIImage imageNamed: @"meizi.png"];
 
     
     // Do any additional setup after loading the view from its nib.

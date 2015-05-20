@@ -18,9 +18,10 @@ typedef void (^ButtonPressBlock)();
 	ButtonPressBlock	b1Function;
 	int					index;
 }
+@property (retain, nonatomic) IBOutlet UIButton *yobutton;
 
-@property (nonatomic, retain)	IBOutlet	UIButton*			button0;
-@property (nonatomic, retain)	IBOutlet	UIButton*			button1;
+@property (retain, nonatomic) IBOutlet UITextView *eventDetail;
+
 @property (copy)							ButtonPressBlock	b0Function;
 @property (copy)							ButtonPressBlock	b1Function;
 @property (nonatomic)						int					index;

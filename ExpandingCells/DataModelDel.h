@@ -13,6 +13,6 @@
 
 +(void) load;
 
-+(NSString *)myModel;
++(DataModel *)myModel;
 +(DataModel *)update:(DataModel *)newModel;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DataModel.h"
+#import "event.h"
 
 @implementation DataModel
 
@@ -14,56 +15,60 @@
 {
     self = [super init];
     
-    _question_array = [[NSMutableArray alloc] init];
-    [_question_array addObject:@"What should I buy?"];
-    [_question_array addObject:@"Who will win the SuperBowl?"];
-    [_question_array addObject:@"Which school rules LA?"];
+    _event_array = [[NSMutableArray alloc] init];
     
-    _option_left_names = [[NSMutableArray alloc] init];
-    [_option_left_names addObject:@"Windows!"];
-    [_option_left_names addObject:@"Patriots!"];
-    [_option_left_names addObject:@"UCLA!"];
+    event *first = [[event alloc] init];
+    first.eventName = @"Study at Library";
+    first.eventTime = @"8:00am 05/16/2015";
+    first.eventPlace = @"Powell Library";
+    first.joinPeople = @3;
+    first.owner = @"Lei";
     
-    _option_left_votes = [[NSMutableArray alloc] init];
-    int x = 10;
-    NSNumber* xWrapped = [NSNumber numberWithInt:x];
-    [_option_left_votes addObject:xWrapped];
-    x = 3;
-    xWrapped = [NSNumber numberWithInt:x];
-    [_option_left_votes addObject:xWrapped];
-    x = 4;
-    xWrapped = [NSNumber numberWithInt:x];
-    [_option_left_votes addObject:xWrapped];
+    [_event_array addObject:first];
+    
+    event *second = [[event alloc] init];
+    second.eventName = @"Go Hiking";
+    second.eventTime = @"1:00pm 05/17/2015";
+    second.eventPlace = @"Holiwood Sign";
+    second.joinPeople = @5;
+    second.owner = @"fafa";
+    
+    [_event_array addObject:second];
+    
+    event *third = [[event alloc] init];
+    third.eventName = @"Go Boiling Crab";
+    third.eventTime = @"6:00pm 05/15/2015";
+    third.eventPlace = @"Boiling Crab";
+    third.joinPeople = @6;
+    third.owner = @"PK";
+    
+    [_event_array addObject:third];
+    
+    event *fourth = [[event alloc] init];
+    fourth.eventName = @"Play dota";
+    fourth.eventTime = @"9:00pm 05/15/2015";
+    fourth.eventPlace = @"Rieber Hall Lounge";
+    fourth.joinPeople = @3;
+    fourth.owner = @"Tianyi";
+    
+    [_event_array addObject:fourth];
 
-    _option_right_names = [[NSMutableArray alloc] init];
-    [_option_right_names addObject:@"Android!"];
-    [_option_right_names addObject:@"Seahawks!"];
-    [_option_right_names addObject:@"USC!"];
     
-    _option_right_votes = [[NSMutableArray alloc] init];
-    x = 5;
-    xWrapped = [NSNumber numberWithInt:x];
-    [_option_right_votes addObject:xWrapped];
-    x = 3;
-    xWrapped = [NSNumber numberWithInt:x];
-    [_option_right_votes addObject:xWrapped];
-    x = 2;
-    xWrapped = [NSNumber numberWithInt:x];
-    [_option_right_votes addObject:xWrapped];
 
+  
     return self;
 }
 
-//- (NSMutableArray *)question_array
+//- (NSMutableArray *)event_array
 //{
-//    if(!_question_array)
+//    if(!_event_array)
 //    {
-//        _question_array = [[NSMutableArray alloc] init];
-//        [_question_array addObject:@"Do you want to build a snowman?"];
-//        [_question_array addObject:@"IOS or Android?"];
-//        [_question_array addObject:@"UCLA or Bruins?"];
+//        _event_array = [[NSMutableArray alloc] init];
+//        [_event_array addObject:@"Do you want to build a snowman?"];
+//        [_event_array addObject:@"IOS or Android?"];
+//        [_event_array addObject:@"UCLA or Bruins?"];
 //    }
-//    return _question_array;
+//    return _event_array;
 //}
 //- (NSMutableArray *)option_left_names
 //{

@@ -12,8 +12,7 @@
 @implementation Cell
 
 
-@synthesize button0;
-@synthesize button1;
+
 @synthesize b0Function;
 @synthesize b1Function;
 @synthesize index;
@@ -37,7 +36,7 @@
 	 [self setFrame:CGRectMake(	oldFrame.origin.x,
 					oldFrame.origin.y,
 					oldFrame.size.width,
-					oldFrame.size.height * 4)];
+					oldFrame.size.height * 3)];
 }
 
 
@@ -50,7 +49,7 @@
 	[self setFrame:CGRectMake(	oldFrame.origin.x,
 					oldFrame.origin.y,
 					oldFrame.size.width,
-					oldFrame.size.height / 4)];
+					oldFrame.size.height / 3)];
 }
 
 
@@ -60,18 +59,10 @@
 
 -(IBAction)buttonWasPressed:(id)sender
 {
-	CellButton*		button	= (CellButton*)sender;
+    
 	ButtonPressBlock	f0	= [self b0Function];
-	ButtonPressBlock	f1	= [self b1Function];
+    f0();
 	
-	if (button == [self button0])
-	{
-		f0();
-	}
-	else
-	{
-		f1();
-	}
 }
 
 
@@ -92,8 +83,13 @@
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{	
-	[super setSelected:selected animated:animated];
+	
+{	[super setSelected:selected animated:animated];
 }
 
+- (void)dealloc {
+    [_yobutton release];
+    [_eventDetail release];
+    [super dealloc];
+}
 @end

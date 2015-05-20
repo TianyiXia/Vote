@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController">
             <connections>
-                <outlet property="choice1" destination="u0x-qQ-nVp" id="972-Se-YIX"/>
-                <outlet property="choice2" destination="5BV-yf-D9C" id="bHj-6b-i4Z"/>
-                <outlet property="question" destination="45R-w3-rvl" id="fT7-4Q-IeG"/>
+                <outlet property="eventName" destination="45R-w3-rvl" id="Wtf-AS-CU9"/>
+                <outlet property="place" destination="hDz-Nc-Tiv" id="MQh-VE-P9c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,56 +17,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45R-w3-rvl">
-                    <rect key="frame" x="0.0" y="70" width="320" height="85"/>
-                    <color key="backgroundColor" red="1" green="1" blue="0.59999999999999998" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.57195400939999996" green="0.88932955989999996" blue="0.2604592778" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                    <attributedString key="attributedText">
-                        <fragment content="Enter your question here~">
-                            <attributes>
-                                <font key="NSFont" size="14" name="Herculanum"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light"/>
-                </textView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u0x-qQ-nVp">
-                    <rect key="frame" x="8" y="248" width="97" height="30"/>
-                    <color key="backgroundColor" red="1" green="1" blue="0.59999999999999998" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.57195400939999996" green="0.88932955989999996" blue="0.2604592778" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                    <attributedString key="attributedText">
-                        <fragment content="Choice 1">
-                            <attributes>
-                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <font key="NSFont" size="14" name="Herculanum"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5BV-yf-D9C">
-                    <rect key="frame" x="207" y="248" width="97" height="30"/>
-                    <color key="backgroundColor" red="1" green="1" blue="0.59999999999999998" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.57195400939999996" green="0.88932955989999996" blue="0.2604592778" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                    <attributedString key="attributedText">
-                        <fragment content="Choice 2">
-                            <attributes>
-                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="chW-bB-o5O">
-                    <rect key="frame" x="47" y="394" width="210" height="136"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVb-Gn-rEM">
-                    <rect key="frame" x="98" y="421" width="140" height="43"/>
-                    <state key="normal" title="CLICK ME!">
+                    <rect key="frame" x="47" y="430" width="210" height="79"/>
+                    <state key="normal">
                         <color key="titleColor" red="1" green="1" blue="0.59999999999999998" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" red="0.57195400939999996" green="0.88932955989999996" blue="0.2604592778" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                     </state>
@@ -75,13 +27,91 @@
                         <action selector="onClick:" destination="-1" eventType="touchUpInside" id="esb-VZ-9eo"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="chW-bB-o5O">
+                    <rect key="frame" x="47" y="430" width="210" height="87"/>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-zl-kNN">
+                    <rect key="frame" x="0.0" y="160" width="320" height="32"/>
+                    <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Please Enter the Details below:                                          ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Papyrus"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-LY-mDY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="0.46000000000000002" colorSpace="calibratedRGB"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Title" id="Pr2-tT-6yF">
+                            <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="wfu-iI-3g3">
+                                <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cancel:" destination="-1" id="Lyw-BT-hWH"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDz-Nc-Tiv">
+                    <rect key="frame" x="0.0" y="200" width="320" height="35"/>
+                    <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="0.46000000000000002" colorSpace="calibratedRGB"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Please Enter a Place:">
+                            <attributes>
+                                <font key="NSFont" size="14" name="Papyrus"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g98-Tu-NC0">
+                    <rect key="frame" x="0.0" y="243" width="320" height="36"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Please select a Date:">
+                                <attributes>
+                                    <font key="NSFont" size="14" name="Papyrus"/>
+                                    <font key="NSOriginalFont" size="18" name="Papyrus"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="selectDate:" destination="-1" eventType="touchUpInside" id="m1j-sa-oOt"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45R-w3-rvl">
+                    <rect key="frame" x="0.0" y="92" width="320" height="60"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.59999999999999998" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.57195400939999996" green="0.88932955989999996" blue="0.2604592778" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Enter Your Event Name Here~">
+                            <attributes>
+                                <font key="NSFont" size="14" name="Papyrus"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="173" y="254"/>
         </view>
     </objects>
     <resources>
-        <image name="greenImage.png" width="178" height="129"/>
+        <image name="greenImage.png" width="168" height="75"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

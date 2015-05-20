@@ -18,6 +18,5 @@
 
 @property (nonatomic, retain) NSArray*	dataSource;
 @property (nonatomic, retain) Cell*		selectedCell;
-@property (nonatomic, retain) IBOutlet DLPieChart *pieChartView;
 
 @end
