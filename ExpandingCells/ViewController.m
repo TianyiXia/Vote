@@ -145,9 +145,16 @@ static Cell* blankCell = nil;
 	}
 	
 	[self setSelectedCell:cell];
+    
+    if ([cell frame].size.height == 50) {
+        [cell expand];
+    }
+    
+    else{
+        [cell contract];
+    }
 	
-	[cell expand];
-    	
+    
 	if (oldPath && (oldPath.row != indexPath.row))
 	{
 		[tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects: indexPath, oldPath, nil] withRowAnimation:UITableViewRowAnimationNone];

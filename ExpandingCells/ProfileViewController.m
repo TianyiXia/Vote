@@ -8,7 +8,9 @@
 
 #import "ProfileViewController.h"
 #import "AskedViewController.h"
+#import "friendListViewController.h"
 @interface ProfileViewController ()
+
 
 @end
 
@@ -35,6 +37,12 @@
     
 }
 
+- (IBAction)checkFriend:(id)sender {
+    friendListViewController *list = [[[friendListViewController alloc] initWithNibName:@"friendListViewController" bundle:nil] autorelease];
+    
+    [self.navigationController pushViewController:list animated:YES];
+
+}
 
 
 - (void)didReceiveMemoryWarning {

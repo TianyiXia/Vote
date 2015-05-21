@@ -165,7 +165,14 @@ static Cell* blankCell = nil;
     
     [self setSelectedCell:cell];
     
-    [cell expand];
+    if ([cell frame].size.height == 50) {
+        [cell expand];
+    }
+    
+    else{
+        s
+        [cell contract];
+    }
     
     if (oldPath && (oldPath.row != indexPath.row))
     {

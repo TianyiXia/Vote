@@ -18,6 +18,8 @@
 		4F254C4E1A7D3D5300F3F7CC /* blueBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F254C481A7D3D5300F3F7CC /* blueBack.png */; };
 		4F254C4F1A7D3D5300F3F7CC /* redImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F254C491A7D3D5300F3F7CC /* redImage.png */; };
 		4F254C511A7D3D5300F3F7CC /* greenBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F254C4B1A7D3D5300F3F7CC /* greenBack.png */; };
+		4F6B9F2F1B0D4E7D00D49401 /* friendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B9F2D1B0D4E7D00D49401 /* friendListViewController.m */; };
+		4F6B9F301B0D4E7D00D49401 /* friendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B9F2E1B0D4E7D00D49401 /* friendListViewController.xib */; };
 		4FA2F3371B096E7C005A3D33 /* yobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2F3361B096E7C005A3D33 /* yobutton.png */; };
 		4FA2F33A1B0991A9005A3D33 /* event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2F3391B0991A9005A3D33 /* event.m */; };
 		4FECA6F41A7F35D900ED984F /* meizi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA6F31A7F35D900ED984F /* meizi.png */; };
@@ -59,6 +61,9 @@
 		4F254C481A7D3D5300F3F7CC /* blueBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueBack.png; sourceTree = "<group>"; };
 		4F254C491A7D3D5300F3F7CC /* redImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redImage.png; sourceTree = "<group>"; };
 		4F254C4B1A7D3D5300F3F7CC /* greenBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenBack.png; sourceTree = "<group>"; };
+		4F6B9F2C1B0D4E7D00D49401 /* friendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friendListViewController.h; sourceTree = "<group>"; };
+		4F6B9F2D1B0D4E7D00D49401 /* friendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = friendListViewController.m; sourceTree = "<group>"; };
+		4F6B9F2E1B0D4E7D00D49401 /* friendListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = friendListViewController.xib; sourceTree = "<group>"; };
 		4FA2F3361B096E7C005A3D33 /* yobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yobutton.png; sourceTree = "<group>"; };
 		4FA2F3381B0991A9005A3D33 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
 		4FA2F3391B0991A9005A3D33 /* event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = event.m; sourceTree = "<group>"; };
@@ -114,6 +119,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F6B9F311B0D4E9000D49401 /* friendList */ = {
+			isa = PBXGroup;
+			children = (
+				4F6B9F2C1B0D4E7D00D49401 /* friendListViewController.h */,
+				4F6B9F2D1B0D4E7D00D49401 /* friendListViewController.m */,
+				4F6B9F2E1B0D4E7D00D49401 /* friendListViewController.xib */,
+			);
+			name = friendList;
+			sourceTree = "<group>";
+		};
 		4FA2F33B1B0991BF005A3D33 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +295,7 @@
 				4FA2F33B1B0991BF005A3D33 /* ViewController */,
 				4FA2F33C1B0991D8005A3D33 /* MyEvents */,
 				4FA2F33D1B09920B005A3D33 /* Profile */,
+				4F6B9F311B0D4E9000D49401 /* friendList */,
 				4FA2F33E1B099225005A3D33 /* PostView */,
 				4FA2F33F1B09923E005A3D33 /* cell */,
 				4FA2F3401B099253005A3D33 /* DataModel */,
@@ -369,6 +385,7 @@
 				4F254C421A7D233600F3F7CC /* PostViewController.xib in Resources */,
 				9686CAB6169B28730091D33E /* Default.png in Resources */,
 				808783611A7D91F100CBB88F /* AskedViewController.xib in Resources */,
+				4F6B9F301B0D4E7D00D49401 /* friendListViewController.xib in Resources */,
 				9686CAB8169B28730091D33E /* Default@2x.png in Resources */,
 				4FECA6F61A7F3ECF00ED984F /* greenImage.png in Resources */,
 				8087835A1A7D8DC500CBB88F /* tabbarbg.png in Resources */,
@@ -431,6 +448,7 @@
 				9686CAB4169B28730091D33E /* AppDelegate.m in Sources */,
 				9686CABD169B28730091D33E /* ViewController.m in Sources */,
 				9686CACC169B29E20091D33E /* Cell.m in Sources */,
+				4F6B9F2F1B0D4E7D00D49401 /* friendListViewController.m in Sources */,
 				C424794F1A7D7D0700BD783A /* DataModelDel.m in Sources */,
 				4F254C291A7CE45600F3F7CC /* ProfileViewController.m in Sources */,
 			);
