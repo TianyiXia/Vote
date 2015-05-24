@@ -12,6 +12,8 @@
 
 #import "ProfileViewController.h"
 
+#import <Parse/Parse.h>
+
 @implementation AppDelegate
 
 - (void)dealloc
@@ -25,6 +27,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
     self.tabBarController = [[UITabBarController alloc] init];
