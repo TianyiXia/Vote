@@ -29,6 +29,10 @@
 		8087835F1A7D91F100CBB88F /* AskedExpandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8087835B1A7D91F100CBB88F /* AskedExpandingCell.xib */; };
 		808783601A7D91F100CBB88F /* AskedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8087835D1A7D91F100CBB88F /* AskedViewController.m */; };
 		808783611A7D91F100CBB88F /* AskedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8087835E1A7D91F100CBB88F /* AskedViewController.xib */; };
+		80B0A5031B12706F004C7393 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5021B12706F004C7393 /* Bolts.framework */; };
+		80B0A5051B12707A004C7393 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5041B12707A004C7393 /* Parse.framework */; };
+		80B0A5071B12713E004C7393 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5061B12713E004C7393 /* Accounts.framework */; };
+		80B0A5091B12714B004C7393 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5081B12714B004C7393 /* AudioToolbox.framework */; };
 		849508A8EF40AA9ECEBEB443 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 811CA6132AF7FD6154D5709A /* libPods.a */; };
 		9686CAA4169B28730091D33E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9686CAA3169B28730091D33E /* UIKit.framework */; };
 		9686CAA6169B28730091D33E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9686CAA5169B28730091D33E /* Foundation.framework */; };
@@ -76,6 +80,10 @@
 		8087835C1A7D91F100CBB88F /* AskedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskedViewController.h; sourceTree = "<group>"; };
 		8087835D1A7D91F100CBB88F /* AskedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskedViewController.m; sourceTree = "<group>"; };
 		8087835E1A7D91F100CBB88F /* AskedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskedViewController.xib; sourceTree = "<group>"; };
+		80B0A5021B12706F004C7393 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		80B0A5041B12707A004C7393 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		80B0A5061B12713E004C7393 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		80B0A5081B12714B004C7393 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		811CA6132AF7FD6154D5709A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9686CA9F169B28730091D33E /* ExpandingCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandingCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9686CAA3169B28730091D33E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -108,9 +116,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B0A5091B12714B004C7393 /* AudioToolbox.framework in Frameworks */,
+				80B0A5071B12713E004C7393 /* Accounts.framework in Frameworks */,
 				4F254C351A7D059400F3F7CC /* QuartzCore.framework in Frameworks */,
 				9686CAA4169B28730091D33E /* UIKit.framework in Frameworks */,
 				9686CAA6169B28730091D33E /* Foundation.framework in Frameworks */,
+				80B0A5051B12707A004C7393 /* Parse.framework in Frameworks */,
+				80B0A5031B12706F004C7393 /* Bolts.framework in Frameworks */,
 				9686CAA8169B28730091D33E /* CoreGraphics.framework in Frameworks */,
 				849508A8EF40AA9ECEBEB443 /* libPods.a in Frameworks */,
 			);
@@ -278,6 +290,10 @@
 		9686CAA2169B28730091D33E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80B0A5081B12714B004C7393 /* AudioToolbox.framework */,
+				80B0A5061B12713E004C7393 /* Accounts.framework */,
+				80B0A5041B12707A004C7393 /* Parse.framework */,
+				80B0A5021B12706F004C7393 /* Bolts.framework */,
 				4F254C341A7D059400F3F7CC /* QuartzCore.framework */,
 				9686CAA3169B28730091D33E /* UIKit.framework */,
 				9686CAA5169B28730091D33E /* Foundation.framework */,

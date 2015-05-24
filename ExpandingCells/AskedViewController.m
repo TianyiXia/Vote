@@ -170,7 +170,7 @@ static Cell* blankCell = nil;
     }
     
     else{
-        s
+        
         [cell contract];
     }
     
