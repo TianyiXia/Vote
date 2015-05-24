@@ -29,12 +29,12 @@
     
     self.tabBarController = [[UITabBarController alloc] init];
     
-    self.firstViewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    ViewController *firstViewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
     
-    self.secondViewController = [[[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil] autorelease];
+    ProfileViewController *secondViewController = [[[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil] autorelease];
     
-    self.navController1 = [[UINavigationController alloc] initWithRootViewController:self.firstViewController];
-    self.navController2 = [[UINavigationController alloc] initWithRootViewController:self.secondViewController];
+    self.navController1 = [[UINavigationController alloc] initWithRootViewController:firstViewController];
+    self.navController2 = [[UINavigationController alloc] initWithRootViewController:secondViewController];
     
     [self.navController1 setNavigationBarHidden:YES];
     [self.navController2 setNavigationBarHidden:YES];
@@ -52,12 +52,16 @@
     [self.tabBarController setViewControllers:myViewControllers];
     
     //add the tab bar controllers view to the window
-    [self.window addSubview:self.tabBarController.view];
+   // [self.window addSubview:self.tabBarController.view];
     
     
     //set the window background color and make it visible
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    LoginViewController *loginviewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+    [self.window setRootViewController:loginviewController];
+    
     return YES;
     
 }

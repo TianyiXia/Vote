@@ -1,19 +1,19 @@
 //
-//  friendListViewController.m
+//  LoginViewController.m
 //  ExpandingCells
 //
-//  Created by ShaoLei on 5/20/15.
+//  Created by ShaoLei on 5/24/15.
 //  Copyright (c) 2015 sbyrd. All rights reserved.
 //
 
-#import "friendListViewController.h"
-#import "ProfileViewController.h"
 #import "LoginViewController.h"
-@interface friendListViewController ()
+#import "AppDelegate.h"
+
+@interface LoginViewController ()
 
 @end
 
-@implementation friendListViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,14 +24,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)Back:(id)sender {
-    ProfileViewController *profile =
-    [[[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil] autorelease];
-    
-    [self.navigationController pushViewController:profile animated:YES];
-    
-    
-
+- (IBAction)signin:(id)sender {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.window setRootViewController:appDelegate.tabBarController];
 }
 
 /*

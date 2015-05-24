@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LoginViewController.h"
 #import "ViewController.h"
 
 @class ProfileViewController;
@@ -17,8 +17,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
-@property (strong, nonatomic) ViewController *firstViewController;
-@property (strong, nonatomic) ProfileViewController *secondViewController;
 @property (nonatomic, strong) UINavigationController *navController1;
 @property (nonatomic, strong) UINavigationController *navController2;
 
