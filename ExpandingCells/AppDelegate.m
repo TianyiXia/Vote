@@ -27,7 +27,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+
+    [Parse setApplicationId:@"tc6ArE5X0Ehza8TMb1o5nSs6zscs6q059z4ep275"
+                  clientKey:@"Z8ZcKcNQDWai7egKFLCEXfkMdcCalnHen6yVd3ay"];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     

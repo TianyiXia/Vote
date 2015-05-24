@@ -39,6 +39,9 @@
 		80B0A5151B1272E8004C7393 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5141B1272E8004C7393 /* StoreKit.framework */; };
 		80B0A5171B1272F8004C7393 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5161B1272F8004C7393 /* libz.dylib */; };
 		80B0A5191B127310004C7393 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5181B127310004C7393 /* libsqlite3.dylib */; };
+		80B0A51E1B12792F004C7393 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A51B1B127853004C7393 /* Parse.framework */; };
+		80B0A51F1B127932004C7393 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A51A1B127853004C7393 /* Bolts.framework */; };
+		80B0A5211B127B0E004C7393 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0A5201B127B0E004C7393 /* SystemConfiguration.framework */; };
 		849508A8EF40AA9ECEBEB443 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 811CA6132AF7FD6154D5709A /* libPods.a */; };
 		9686CAA4169B28730091D33E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9686CAA3169B28730091D33E /* UIKit.framework */; };
 		9686CAA6169B28730091D33E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9686CAA5169B28730091D33E /* Foundation.framework */; };
@@ -96,6 +99,9 @@
 		80B0A5141B1272E8004C7393 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		80B0A5161B1272F8004C7393 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		80B0A5181B127310004C7393 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		80B0A51A1B127853004C7393 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library-1.7.4/Bolts.framework"; sourceTree = "<group>"; };
+		80B0A51B1B127853004C7393 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/parse-library-1.7.4/Parse.framework"; sourceTree = "<group>"; };
+		80B0A5201B127B0E004C7393 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		811CA6132AF7FD6154D5709A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9686CA9F169B28730091D33E /* ExpandingCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandingCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9686CAA3169B28730091D33E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -128,6 +134,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B0A5211B127B0E004C7393 /* SystemConfiguration.framework in Frameworks */,
+				80B0A51F1B127932004C7393 /* Bolts.framework in Frameworks */,
+				80B0A51E1B12792F004C7393 /* Parse.framework in Frameworks */,
 				80B0A5191B127310004C7393 /* libsqlite3.dylib in Frameworks */,
 				80B0A5171B1272F8004C7393 /* libz.dylib in Frameworks */,
 				80B0A5151B1272E8004C7393 /* StoreKit.framework in Frameworks */,
@@ -308,6 +317,9 @@
 		9686CAA2169B28730091D33E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80B0A5201B127B0E004C7393 /* SystemConfiguration.framework */,
+				80B0A51A1B127853004C7393 /* Bolts.framework */,
+				80B0A51B1B127853004C7393 /* Parse.framework */,
 				80B0A5181B127310004C7393 /* libsqlite3.dylib */,
 				80B0A5161B1272F8004C7393 /* libz.dylib */,
 				80B0A5141B1272E8004C7393 /* StoreKit.framework */,
@@ -571,6 +583,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/TianyiXia/Downloads/parse-library-1.7.4",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExpandingCells/ExpandingCells-Prefix.pch";
@@ -588,6 +601,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/TianyiXia/Downloads/parse-library-1.7.4",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExpandingCells/ExpandingCells-Prefix.pch";
